@@ -1,0 +1,123 @@
+/* Mobile layout */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 95vh;
+    width: 95vw;
+    max-width: 600px;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+#scoreBlock{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#gameZone{
+    grid-row: 2/7;
+}
+
+#computerArea .layer2{
+    display: none;
+}
+
+.layer1{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.layer1 img{
+    height: 30vh;
+    max-width: 100%;
+    margin: 0.5rem;
+}
+
+
+.layer2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.layer2 img{
+    height: 5rem;
+    max-width: 90%;
+    padding: 0.5rem;
+}
+
+#playerArea .layer2 img:hover{
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 5px black;
+}
+
+
+
+
+/* Desktop Layout */
+
+@media screen and (min-width: 601px) {
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    #gameZone{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #computerArea{
+        width: 45%;
+    }
+
+    #playerArea{
+        width: 45%;
+    }
+
+    .layer1{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.25rem;
+    }
+
+    .layer1 img{
+        height: 95%;
+        max-width: 100%;
+    }
+
+    #computerArea .layer2{
+        display: flex;
+    }
+    
+    .layer2{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+}
