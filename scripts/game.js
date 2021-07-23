@@ -141,10 +141,14 @@ function checkForWinner(){
     
     
     if(robo == '5'){  
-        setTimeout(function(){window.location = "../index.html"; }, 1500);
+        setTimeout(function(){
+            window.location = "../html/resultlose.html"; 
+        }, 1500);
     }
     else if(player == '5'){
-        setTimeout(function(){window.location = "../index.html"; }, 1500);
+        setTimeout(function(){
+            window.location = "../html/resultwin.html"; 
+        }, 1500);
     }    
 }
 

@@ -1,10 +1,13 @@
 /* Mobile layout */
+
+
+/* This is for main game page or say rockPaperScissors.html file */
 *{
     box-sizing: border-box;
 }
 
 body{
-    height: 65vh;
+    height: 75vh;
     width: 95vw;
     max-width: 768px;
     display: grid;
@@ -35,11 +38,12 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 0.25rem;
+    margin: 1rem;
 }
 
 .layer1 img{
-    height: 30vh;
-    max-width: 100%;
+    height: 25vh;
+    max-width: 80%;
     margin: 0.5rem;
 }
 
@@ -60,10 +64,117 @@ body{
 #playerArea .layer2 img:hover{
     border-radius: 0.3rem;
     box-shadow: 1px 1px 5px black;
+    background-color: rgba(73, 162, 245, 0.801);
 }
 
+/* styles for main index page */
+#indexPageBody{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    height: 100vh;
+    max-width: 100vw;
+    padding: 1.5rem;
+}
 
+header.homepage{
+    grid-row: 1/2;
+    display: flex;
+    place-content: center;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem;
+}
 
+main.homepage{
+    grid-row: 2/5;
+}
+main.homepage h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+
+main.homepage #list{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+main.homepage li{
+    list-style-type: disc;
+    margin: 1rem auto;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#startButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.homepage a{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    border: 1px solid lightblue;
+    max-width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main.homepage a:hover{
+    background-color: rgb(104, 238, 238);
+    color: white;
+}
+
+#resultpage{
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#resultpage h1{
+    font-size: 5rem;
+}
+
+#replay{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#replay a{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    border: 1px solid rgb(160, 241, 166);
+    max-width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#replay a:hover{
+    background-color: rgb(104, 238, 171);
+    color: white;
+}
+
+#statuslose{
+    background-color: red;
+    color:white;
+    font-weight: bolder;
+}
+
+#statuswin{
+    background-color: greenyellow;
+    color:white;
+    font-weight: bolder;
+}
 
 /* Desktop Layout */
 
@@ -74,7 +185,7 @@ body{
     }
 
     body{
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         max-width: 100%;
     }
@@ -104,8 +215,8 @@ body{
     }
 
     .layer1 img{
-        height: 95%;
-        max-width: 100%;
+        height: 80%;
+        max-width: 80%;
     }
 
     #computerArea .layer2{
